@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ebbac3c1-d4f7-4fc4-8b6e-3d4d0997749d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hubot-scripts.json" afterPath="$PROJECT_DIR$/hubot-scripts.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/example.coffee" afterPath="$PROJECT_DIR$/scripts/example.coffee" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="hubot-scripts.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="hubot-scripts.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hubot-scripts.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -45,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scripts.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scripts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -71,8 +70,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/scripts/example.coffee" />
-        <option value="$PROJECT_DIR$/hubot-scripts.json" />
         <option value="$PROJECT_DIR$/scripts/scripts.js" />
+        <option value="$PROJECT_DIR$/hubot-scripts.json" />
       </list>
     </option>
   </component>
@@ -279,12 +278,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1506986250765</updated>
-      <workItem from="1506986259883" duration="714000" />
+      <workItem from="1506986259883" duration="760000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="714000" />
+    <option name="totallyTimeSpent" value="760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1418" width="1280" height="1418" extended-state="0" />
@@ -350,18 +349,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hubot-scripts.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hubot-scripts.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
           <folding />
         </state>
       </provider>
