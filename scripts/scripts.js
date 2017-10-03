@@ -9,9 +9,9 @@ module.exports = function(johnny5) {
     console.log("0: " + res.match[0] + " 1 " + res.match[1]);
 
     var findStr = "please welcome";
-    var start = msg.toLowerCase().lastIndexOf(findStr) + findStr.length;
+    var start = msg.toLowerCase().lastIndexOf(findStr) + findStr.length + 1;
     var names = msg.substring(start, 1000);
 
-    return res.send("Welcome " + names + "  Have a glorious day");
+    return res.send("Welcome " + names + ".  Have a glorious day");
   });
 }
