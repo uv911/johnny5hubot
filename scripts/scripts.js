@@ -4,7 +4,7 @@ module.exports = function(johnny5) {
 //    return res.send("Hi Johnny5 is there!");
 //  });
 
-  johnny5.hear(/please welcome/, function(res) {
+  johnny5.hear(/please\swelcome/, function(res) {
     var after = res.match[0].substring(14, 1000);
     return res.send("Welcome " + after + ". Have a glorious day");
   });
