@@ -8,10 +8,29 @@ module.exports = function(johnny5) {
     var msg = res.match[0];
     console.log("0: " + res.match[0] + " 1 " + res.match[1]);
 
-    var findStr = "please welcome";
-    var start = msg.toLowerCase().lastIndexOf(findStr) + findStr.length + 1;
+    return res.send(processMessage(msg));
+  });
+
+  function processMessage(msg) {
+    console.log("Called processMessage with message " + msg);
+
+    var welcomeKey = "please welcome";
+
+    if(isWelcomeNewMemberMsg(welcomeKey, msg)) {
+      return formatNewMemberOutput(welcomeKey, msg)
+    }
+
+
+  }
+  function isWelcomeNewMemberMsg(findStr, msg) {
+    return (msg.toLowerCase().lastIndexOf(findStr.toLowerCase()) > 0);
+  }
+
+  function formatNewMemberOutput(findStr, msg) {
+    var start = msg.toLowerCase().lastIndexOf(findStr.toLowerCase()) + findStr.length + 1;
     var names = msg.substring(start, 1000);
 
-    return res.send("Welcome " + names + "\.  Have a glorious day");
-  });
+    return "Welcome " + names + "  Have a glorious day";
+
+  }
 }
