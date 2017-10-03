@@ -4,8 +4,9 @@ module.exports = function(johnny5) {
 //    return res.send("Hi Johnny5 is there!");
 //  });
 
-  johnny5.hear(/please/, function(res) {
-    var names = res.match[0] + res.match[1];//.substring(14, 1000);
+  johnny5.hear(/.+/, function(res) {
+    var names = res.match[0].substring(14, 1000);
+    console.log("0: " + res.match[0] + " 1 " + res.match[1]);
     return res.send("Welcome " + names + ". Have a glorious day");
   });
 }
