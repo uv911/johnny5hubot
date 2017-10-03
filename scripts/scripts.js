@@ -43,6 +43,6 @@ module.exports = function(johnny5) {
 
   function formatNames(namesArray) {
     var val = "<" + namesArray.join(">, <") + ">";
-    return val.substring(0, val.lastIndexOf(",")) + " and " + val.substring(val.lastIndexOf(",") + 1, val.length);
+    return val.substring(0, val.lastIndexOf(",")) + " and " + val.substring(val.lastIndexOf(",") + 2, val.length);
   }
 }
