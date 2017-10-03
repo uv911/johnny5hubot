@@ -30,7 +30,7 @@ module.exports = function(johnny5) {
     var start = msg.toLowerCase().lastIndexOf(findStr.toLowerCase()) + findStr.length + 1;
     var names = msg.substring(start, msg.length);
 
-    return "Welcome " + formatNames(buildNamesArrayFromString(names)) + ".  Have a glorious day";
+    return "Welcome " + formatNames(buildNamesArrayFromString(names)) + ".  Have a glorious day!!!";
   }
 
   function buildNamesArrayFromString(str) {
@@ -42,6 +42,7 @@ module.exports = function(johnny5) {
 
 
   function formatNames(namesArray) {
-    return "<" + namesArray.join("> and <") + ">";
+    var val = "<" + namesArray.join(">, <") + ">";
+    return val.substring(0, val.lastIndexOf(",")) + " and " + val.substring(val.lastIndexOf(",") + 1, val.length);
   }
 }
