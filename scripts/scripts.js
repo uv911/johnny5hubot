@@ -5,8 +5,13 @@ module.exports = function(johnny5) {
 //  });
 
   johnny5.hear(/.+/, function(res) {
-    var names = res.match[0].substring(14, 1000);
+    var msg = res.match[0];
     console.log("0: " + res.match[0] + " 1 " + res.match[1]);
-    return res.send("Welcome " + names + ". Have a glorious day");
+
+    var findStr = "please welcome";
+    var start = msg.toLowerCase().lastIndexOf(findStr) + findStr.length;
+    var names = msg.substring(start, 1000);
+
+    return res.send("Welcome " + names + "  Have a glorious day");
   });
 }
