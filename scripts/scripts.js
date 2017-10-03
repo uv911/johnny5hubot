@@ -28,9 +28,20 @@ module.exports = function(johnny5) {
 
   function formatNewMemberOutput(findStr, msg) {
     var start = msg.toLowerCase().lastIndexOf(findStr.toLowerCase()) + findStr.length + 1;
-    var names = msg.substring(start, 1000);
+    var names = msg.substring(start, msg.length);
 
-    return "Welcome " + names + "  Have a glorious day";
+    return "Welcome " + formatNames(buildNamesArrayFromString(names)) + ".  Have a glorious day";
+  }
 
+  function buildNamesArrayFromString(str) {
+    var names = str.match(/@[a-zA-Z]*/g);
+
+    return names;
+  }
+
+
+
+  function formatNames(namesArray) {
+    return "<" + namesArray.join("> and <") + ">";
   }
 }
