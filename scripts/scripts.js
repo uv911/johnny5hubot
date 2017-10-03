@@ -12,6 +12,6 @@ module.exports = function(johnny5) {
     var start = msg.toLowerCase().lastIndexOf(findStr) + findStr.length + 1;
     var names = msg.substring(start, 1000);
 
-    return res.send("Welcome " + names + ".  Have a glorious day");
+    return res.send("Welcome " + names + "\.  Have a glorious day");
   });
 }
