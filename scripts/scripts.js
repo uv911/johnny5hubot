@@ -79,7 +79,7 @@ module.exports = function(johnny5) {
   }
 
   function buildNamesArrayFromString(str) {
-    var names = str.match(/@[a-zA-Z]*/g);
+    var names = str.match(/@[a-zA-Z0-9]*/g);
 
     return names;
   }
