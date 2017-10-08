@@ -7,6 +7,9 @@ pugs = [
   "http://www.tshirtvortex.net/wp-content/uploads/fearpug-1.jpg",
   "http://68.media.tumblr.com/a60ba3b5f9fc3e3b0b7b2393a42abedd/tumblr_nne286YYJd1tiokedo1_400.jpg",
   "http://iruntheinternet.com/lulzdump/images/confused-dog-slide-scared-pug-1317174280e.jpg?id=",
+  "https://i.pinimg.com/736x/a3/2d/56/a32d56331f7a5751f629ed282bd5c4fc--fat-pug-funny-shit.jpg",
+  "http://iruntheinternet.com/lulzdump/images/pug-cat-dog-shocked-surprise-13486177729.jpg?id=",
+  "https://i.pinimg.com/736x/a3/2d/56/a32d56331f7a5751f629ed282bd5c4fc--fat-pug-funny-shit.jpg",
 
   "http://38.media.tumblr.com/076aebb944f6a19bfa1ae4d82b355fed/tumblr_n7p1mmtIz71r3gb3zo1_400.gif",
   "http://31.media.tumblr.com/741eebca8865bdbc7ac7af23db6adc1d/tumblr_n7p1mmtIz71r3gb3zo2_400.gif",
@@ -141,7 +144,15 @@ module.exports = function(johnny5) {
       case "scared":
         returnVal = pugs[7];
         break;
-
+      case "disgusted":
+        returnVal = pugs[8];
+        break;
+      case "surprised":
+        returnVal = pugs[9];
+        break;
+      case "defiant":
+        returnVal = pugs[10];
+        break;
       default:
         returnVal = pugs[chooseRandomPosition(pugs)];
     }
