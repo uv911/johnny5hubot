@@ -87,7 +87,7 @@ module.exports = function(johnny5) {
   johnny5.respond(/I am feeling(.*)/i, function(res) {
     var emotion = res.match[1];
     var returnMsg = "I hear you loud and clear... you are feeling " + emotion +
-      ".\n\n Maybe you should reconsider your emotions.\n\n" + pugs[chooseRandomPosition(pugs)];
+      ".\n\n Maybe you should reconsider your emotions.\n\n" + getPugImageLinkForEmotion(emotion);
 
     console.log(returnMsg);
     res.reply(returnMsg);
@@ -98,14 +98,28 @@ module.exports = function(johnny5) {
     if(emotion && emotion.trim().length == 0) emotion = "nothing";
 
     var returnMsg = "I AM LISTENING!!!  I hear you loud and clear... you are feeling " + emotion +
-      ".\n\n Maybe you should reconsider your emotions.\n\n" + pugs[chooseRandomPosition(pugs)];
+      ".\n\n Maybe you should reconsider your emotions.\n\n" + getPugImageLinkForEmotion(emotion);
 
     console.log(returnMsg);
     res.send(returnMsg);
   });
 
 
+  function getPugImageLinkForEmotion(emotion) {
+    var returnVal = null;
+    switch (emotion.trim().toLowerCase()) {
+      case "angry":
+        returnVal = pugs[0];
+        break;
+      case "happy":
+        returnVal = pugs[1];
+        break;
+      default:
+        returnVal = pugs[chooseRandomPosition(pugs)];
+    }
 
+    return returnVal;
+  }
 
 
 
