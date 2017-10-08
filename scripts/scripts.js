@@ -115,4 +115,21 @@ module.exports = function(johnny5) {
       return getRandomIntInclusive(0, array.length - 1);
     }
   }
+
+  function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    //The maximum is inclusive and the minimum is inclusive
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function isArray(array) {
+    if (array instanceof Array) {
+      return true;
+    } else {
+      console.log("Unable to choose from NON-Arrays");
+      return false;
+    }
+  }
+  
 }
