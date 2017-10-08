@@ -75,7 +75,9 @@ module.exports = function(johnny5) {
 
   johnny5.respond(/I am feeling(.*)/i, function(res) {
     var emotion = res.match[1];
-    var returnMsg = "I hear you loud and clear... you are feeling " + emotion + ".  I have an idea for you... click here: ";
+    var returnMsg = "I hear you loud and clear... you are feeling " + emotion +
+      ".\n\n Maybe you should reconsider your emotions.\n\n" + pugs[chooseRandomPosition(pugs)];
+
     console.log(returnMsg);
     res.reply(returnMsg);
   });
@@ -84,11 +86,10 @@ module.exports = function(johnny5) {
     var emotion = res.match[1];
     if(emotion && emotion.trim().length == 0) emotion = "nothing";
 
-    var returnMsg = "I AM LISTENING!!!  I hear you loud and clear... you are feeling " + emotion + "\n" +
-      pugs[chooseRandomPosition(pugs)];
+    var returnMsg = "I AM LISTENING!!!  I hear you loud and clear... you are feeling " + emotion +
+      ".\n\n Maybe you should reconsider your emotions.\n\n" + pugs[chooseRandomPosition(pugs)];
+
     console.log(returnMsg);
-
-
     res.send(returnMsg);
   });
 
@@ -131,5 +132,5 @@ module.exports = function(johnny5) {
       return false;
     }
   }
-  
+
 }
