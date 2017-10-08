@@ -35,11 +35,15 @@ module.exports = function(johnny5) {
 
   console.log("@johnny5 is alive!!!");
 
-  johnny5.hear(/.+/, function(res) {
+  //johnny5.hear(/.+/, function(res) {
+  johnny5.hear(/please welcome (.*) doors/i, function(res) {
     var msg = res.match[0];
-    console.log("@johnny5.hear response values - 0: " + msg + " 1 " + res.match[1]);
+    var members = res.match[1];
 
-    return res.send(processMessage(msg));
+    console.log("@johnny5.hear response values - 0: " + msg + " 1 " + members);
+    //console.log("@johnny5.hear hear everything response values - 0: " + msg);
+
+    return res.send(processMessage(msg, members));
   });
 
   johnny5.hear(/badger/i, function(res) {
@@ -50,8 +54,8 @@ module.exports = function(johnny5) {
     res.reply("I'm afraid I can't let you do that.");
   });
 
-  function processMessage(msg) {
-    console.log("Called processMessage with message " + msg);
+  function processMessage(msg, members) {
+    console.log("Called processMessage with message " + msg + " with members " + members);
 
     /*
      * To Test enter
@@ -68,7 +72,11 @@ module.exports = function(johnny5) {
     return (msg.toLowerCase().lastIndexOf(findStr.toLowerCase()) > 0);
   }
 
-  function formatNewMemberOutput(findStr, msg) {
+  function formatNewMemberOutput(members) {
+    return "Welcome " + formatNames(buildNamesArrayFromString(members)) + ".  Have a glorious day!!!";
+  }
+
+  function formatNewMemberOutputOld(findStr, msg) {
     var start = msg.toLowerCase().lastIndexOf(findStr.toLowerCase()) + findStr.length + 1;
     var names = msg.substring(start, msg.length);
 
