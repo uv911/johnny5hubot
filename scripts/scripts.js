@@ -115,7 +115,7 @@ module.exports = function(johnny5) {
 
 
   function getPugImageLinkForEmotion(emotion) {
-    var returnVal = null;
+    var returnVal = "";
     switch (emotion.trim().toLowerCase()) {
       case "fat":
         returnVal = pugs[0];
@@ -141,11 +141,11 @@ module.exports = function(johnny5) {
       case "scared":
         returnVal = pugs[7];
         break;
-      
+
       default:
         returnVal = pugs[chooseRandomPosition(pugs)];
     }
-
+    console.log("Emotional pug link is: " + returnVal);
     return returnVal;
   }
 
