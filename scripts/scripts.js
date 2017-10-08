@@ -55,11 +55,23 @@ module.exports = function(johnny5) {
   });
 
   johnny5.respond(/open the pod bay doors/i, function(res) {
-    res.reply("I'm afraid I can't let you do that.");
+    var returnMsg = "I hear you want me to " + res.match[0] + " I'm afraid I can't let you do that.";
+    console.log(returnMsg);
+    res.reply(returnMsg);
   });
 
   johnny5.respond(/I am feeling (.*)/i, function(res) {
-    res.reply("I hear you loud and clear... you are feeling " + res.match[1]);
+    var emotion = res.match[1];
+    var returnMsg = "I hear you loud and clear... you are feeling " + emotion;
+    console.log(returnMsg);
+    res.reply(returnMsg);
+  });
+
+  johnny5.hear(/Listen I am feeling (.*)/i, function(res) {
+    var emotion = res.match[1];
+    var returnMsg = "I AM LISTENING!!!  I hear you loud and clear... you are feeling " + emotion
+    console.log(returnMsg);
+    res.send(returnMsg);
   });
 
   function formatNewMemberOutput(members) {
