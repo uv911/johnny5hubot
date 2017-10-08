@@ -35,15 +35,19 @@ module.exports = function(johnny5) {
 
   console.log("@johnny5 is alive!!!");
 
+  /*
+   * To Test enter
+   * @johnny5 please welcome @robocop @data and @kitt
+   */
   //johnny5.hear(/.+/, function(res) {
-  johnny5.hear(/please welcome (.*) doors/i, function(res) {
+  johnny5.hear(/please welcome (.*)/i, function(res) {
     var msg = res.match[0];
     var members = res.match[1];
 
-    console.log("@johnny5.hear response values - 0: " + msg + " 1 " + members);
+    console.log("@johnny5.hear response values - match[0]: " + msg + " match[1]: " + members);
     //console.log("@johnny5.hear hear everything response values - 0: " + msg);
 
-    return res.send(processMessage(msg, members));
+    return res.send(formatNewMemberOutput(members));
   });
 
   johnny5.hear(/badger/i, function(res) {
@@ -54,33 +58,8 @@ module.exports = function(johnny5) {
     res.reply("I'm afraid I can't let you do that.");
   });
 
-  function processMessage(msg, members) {
-    console.log("Called processMessage with message " + msg + " with members " + members);
-
-    /*
-     * To Test enter
-     * @johnny5 please welcome @robocop @data and @kitt
-     */
-    var welcomeKey = "please welcome";
-    if(isWelcomeNewMemberMsg(welcomeKey, msg)) {
-      return formatNewMemberOutput(welcomeKey, msg)
-    }
-
-
-  }
-  function isWelcomeNewMemberMsg(findStr, msg) {
-    return (msg.toLowerCase().lastIndexOf(findStr.toLowerCase()) > 0);
-  }
-
   function formatNewMemberOutput(members) {
     return "Welcome " + formatNames(buildNamesArrayFromString(members)) + ".  Have a glorious day!!!";
-  }
-
-  function formatNewMemberOutputOld(findStr, msg) {
-    var start = msg.toLowerCase().lastIndexOf(findStr.toLowerCase()) + findStr.length + 1;
-    var names = msg.substring(start, msg.length);
-
-    return "Welcome " + formatNames(buildNamesArrayFromString(names)) + ".  Have a glorious day!!!";
   }
 
   function buildNamesArrayFromString(str) {
