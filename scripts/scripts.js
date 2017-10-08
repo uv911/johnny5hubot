@@ -9,6 +9,9 @@ pugs = [
   "http://37.media.tumblr.com/63607822541d0ed463fee5adc5dd68ef/tumblr_n7p1mmtIz71r3gb3zo8_400.gif"
 ]
 
+var pugme = require("hubot-pugme");
+console.log(pugme);
+
 module.exports = function(johnny5) {
 
    /*
@@ -45,6 +48,7 @@ module.exports = function(johnny5) {
 //  });
 
   console.log("********************************** @johnny5 is alive!!! **********************************");
+
 
 
 
@@ -91,6 +95,10 @@ module.exports = function(johnny5) {
 
     console.log(returnMsg);
     res.send(returnMsg);
+  });
+
+  pugme.hear(/badger/i, function(res) {
+    res.send("Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS");
   });
 
   function formatNewMemberOutput(members) {
