@@ -11,10 +11,11 @@ pugs = [
 
 var pugme = require("hubot-pugme");
 
+/*
 pugme.hear(/badger/i, function(res) {
   res.send("Pugs HATE Badgers!!!\n\nPUGS DON'T NEED NO STINKIN BADGERS");
 });
-
+*/
 
 module.exports = function(johnny5) {
 
