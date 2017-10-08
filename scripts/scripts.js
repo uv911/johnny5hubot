@@ -1,4 +1,13 @@
 pugs = [
+  "http://www.getpuggedup.com/wp-content/uploads/2014/12/PugDietStartsNextWeek.png",
+  "https://vignette3.wikia.nocookie.net/degrassi/images/a/a5/Tumblr_mu9v09yfVy1shy71oo1_500.jpg/revision/latest?cb=20140823001119",
+  "https://i.pinimg.com/736x/68/5a/e9/685ae96e0db55512da4a7615a824f92a--pug-dogs-doggies.jpg",
+  "https://i.pinimg.com/736x/24/6c/b4/246cb44a42d4d48714b1ef92faf27621--funny-images-funny-animals.jpg",
+  "http://www.pugnow.com/wp-content/uploads/2016/03/selfie-angry-pug.jpg",
+  "http://www.tshirtvortex.net/wp-content/uploads/fearpug-1.jpg",
+  "http://68.media.tumblr.com/a60ba3b5f9fc3e3b0b7b2393a42abedd/tumblr_nne286YYJd1tiokedo1_400.jpg",
+  "http://iruntheinternet.com/lulzdump/images/confused-dog-slide-scared-pug-1317174280e.jpg?id=",
+
   "http://38.media.tumblr.com/076aebb944f6a19bfa1ae4d82b355fed/tumblr_n7p1mmtIz71r3gb3zo1_400.gif",
   "http://31.media.tumblr.com/741eebca8865bdbc7ac7af23db6adc1d/tumblr_n7p1mmtIz71r3gb3zo2_400.gif",
   "http://37.media.tumblr.com/a0730380fdcc69a0cdbfec82e03ead8e/tumblr_n7p1mmtIz71r3gb3zo3_400.gif",
@@ -87,7 +96,7 @@ module.exports = function(johnny5) {
   johnny5.respond(/I am feeling(.*)/i, function(res) {
     var emotion = res.match[1];
     var returnMsg = "I hear you loud and clear... you are feeling " + emotion +
-      ".\n\n Maybe you should reconsider your emotions.\n\n" + getPugImageLinkForEmotion(emotion);
+      ".\n\n Maybe this will help.\n\n" + getPugImageLinkForEmotion(emotion);
 
     console.log(returnMsg);
     res.reply(returnMsg);
@@ -98,7 +107,7 @@ module.exports = function(johnny5) {
     if(emotion && emotion.trim().length == 0) emotion = "nothing";
 
     var returnMsg = "I AM LISTENING!!!  I hear you loud and clear... you are feeling " + emotion +
-      ".\n\n Maybe you should reconsider your emotions.\n\n" + getPugImageLinkForEmotion(emotion);
+      ".\n\n Maybe this will help.\n\n" + getPugImageLinkForEmotion(emotion);
 
     console.log(returnMsg);
     res.send(returnMsg);
@@ -108,12 +117,31 @@ module.exports = function(johnny5) {
   function getPugImageLinkForEmotion(emotion) {
     var returnVal = null;
     switch (emotion.trim().toLowerCase()) {
-      case "angry":
+      case "fat":
         returnVal = pugs[0];
         break;
-      case "happy":
+      case "frustrated":
         returnVal = pugs[1];
         break;
+      case "happy":
+        returnVal = pugs[2];
+        break;
+      case "confused":
+        returnVal = pugs[3];
+        break;
+      case "angry":
+        returnVal = pugs[4];
+        break;
+      case "cool":
+        returnVal = pugs[5];
+        break;
+      case "brave":
+        returnVal = pugs[6];
+        break;
+      case "scared":
+        returnVal = pugs[7];
+        break;
+      
       default:
         returnVal = pugs[chooseRandomPosition(pugs)];
     }
