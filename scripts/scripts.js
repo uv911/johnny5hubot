@@ -54,10 +54,10 @@ module.exports = function(johnny5) {
     res.send("Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS");
   });
 
-  johnny5.respond(/open the pod bay doors/i, function(res) {
+  johnny5.hear(/open the pod bay doors/i, function(res) {
     var returnMsg = "I hear you want me to " + res.match[0] + " I'm afraid I can't let you do that.";
     console.log(returnMsg);
-    res.reply(returnMsg);
+    res.send(returnMsg);
   });
 
   johnny5.respond(/I am feeling (.*)/i, function(res) {
