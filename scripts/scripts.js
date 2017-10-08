@@ -68,21 +68,24 @@ module.exports = function(johnny5) {
   });
 
   johnny5.respond(/open the pod bay doors/i, function(res) {
-    var returnMsg = "I hear you want me to '" + res.match[0] + "'...  I'm afraid I can't let you do that for you.";
+    var returnMsg = "I hear you want '" + res.match[0] + "'...  I'm afraid I can't let you do that for you.";
     console.log(returnMsg);
     res.reply(returnMsg);
   });
 
-  johnny5.respond(/I am feeling (.*)/i, function(res) {
+  johnny5.respond(/I am feeling(.*)/i, function(res) {
     var emotion = res.match[1];
     var returnMsg = "I hear you loud and clear... you are feeling " + emotion + ".  I have an idea for you... click here: ";
     console.log(returnMsg);
     res.reply(returnMsg);
   });
 
-  johnny5.hear(/Listen I am feeling (.*)/i, function(res) {
+  johnny5.hear(/Listen I am feeling(.*)/i, function(res) {
     var emotion = res.match[1];
-    var returnMsg = "I AM LISTENING!!!  I hear you loud and clear... you are feeling " + emotion + pugs[1];
+    if(emotion && emotion.trim().length == 0) emotion = "nothing";
+
+    var returnMsg = "I AM LISTENING!!!  I hear you loud and clear... you are feeling " + emotion + "\n" +
+      pugs[chooseRandomPosition(pugs)];
     console.log(returnMsg);
 
 
@@ -104,5 +107,12 @@ module.exports = function(johnny5) {
   function formatNames(namesArray) {
     var val = "<" + namesArray.join(">, <") + ">";
     return val.substring(0, val.lastIndexOf(",")) + " and " + val.substring(val.lastIndexOf(",") + 2, val.length);
+  }
+
+  function chooseRandomPosition(array) {
+    if(isArray(array)) {
+      // get random position
+      return getRandomIntInclusive(0, array.length - 1);
+    }
   }
 }
