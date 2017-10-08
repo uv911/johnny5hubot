@@ -50,7 +50,8 @@ module.exports = function(johnny5) {
 
 
   var pugme = require("hubot-pugme");
-  console.log(pugme);
+  var gImages = require("hubot-google-images");
+  //console.log(pugme);
 
   /*
    * To Test enter
@@ -97,10 +98,13 @@ module.exports = function(johnny5) {
     res.send(returnMsg);
   });
 
+  /*
   pugme.hear(/badger/i, function(res) {
     res.send("Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS");
   });
 
+  */
+  
   function formatNewMemberOutput(members) {
     return "Welcome " + formatNames(buildNamesArrayFromString(members)) + ".  Have a glorious day!!!";
   }
