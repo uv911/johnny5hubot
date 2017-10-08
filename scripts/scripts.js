@@ -5,6 +5,8 @@ module.exports = function(johnny5) {
     * heroku login
     * heroku create jim
     * heroku create johnny5-jsr17
+    *
+    * Sonyl like using the git protocol command instead of the https one
     * git remote add heroku https://git.heroku.com/johnny5-jsr17.git
     * heroku config:add HEROKU_URL=https://johnny5-jsr17.herokuapp.com
     * heroku config:add HUBOT_SLACK_TOKEN=<my token>
@@ -32,13 +34,21 @@ module.exports = function(johnny5) {
 //  });
 
   console.log("@johnny5 is alive!!!");
-  
+
   johnny5.hear(/.+/, function(res) {
     var msg = res.match[0];
-    console.log("0: " + res.match[0] + " 1 " + res.match[1]);
+    console.log("@johnny5.hear response values - 0: " + msg + " 1 " + res.match[1]);
 
     return res.send(processMessage(msg));
   });
+
+  johnny5.hear(/badger/i, function(res) {
+    res.send("Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS");
+  }
+
+  johnny5.respond(/open the pod bay doors/i, function(res) {
+    res.reply("I'm afraid I can't let you do that.");
+  }
 
   function processMessage(msg) {
     console.log("Called processMessage with message " + msg);
