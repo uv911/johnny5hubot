@@ -9,6 +9,11 @@ pugs = [
   "http://37.media.tumblr.com/63607822541d0ed463fee5adc5dd68ef/tumblr_n7p1mmtIz71r3gb3zo8_400.gif"
 ]
 
+var pugme = require("hubot-pugme");
+
+pugme.hear(/badger/i, function(res) {
+  res.send("Pugs HATE Badgers!!!\n\nPUGS DON'T NEED NO STINKIN BADGERS");
+});
 
 
 module.exports = function(johnny5) {
@@ -49,7 +54,7 @@ module.exports = function(johnny5) {
   console.log("********************************** @johnny5 is alive!!! **********************************");
 
 
-  var pugme = require("hubot-pugme");
+  //var pugme = require("hubot-pugme");
   var gImages = require("hubot-google-images");
   //console.log(pugme);
 
@@ -98,10 +103,8 @@ module.exports = function(johnny5) {
     res.send(returnMsg);
   });
 
-  
-  pugme.hear(/badger/i, function(res) {
-    res.send("Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS");
-  });
+
+
 
 
 
