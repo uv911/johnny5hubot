@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebbac3c1-d4f7-4fc4-8b6e-3d4d0997749d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/external-scripts.json" afterPath="$PROJECT_DIR$/external-scripts.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/scripts.js" afterPath="$PROJECT_DIR$/scripts/scripts.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,7 +33,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="18" />
-              <folding />
+              <folding>
+                <marker date="1507494223073" expanded="true" signature="182:635" ph="{&quot;hubot&quot;: &quot;^2.19.0&quot;...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,11 +50,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scripts.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scripts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="62" column="3" lean-forward="false" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
+            <state relative-caret-position="501">
+              <caret line="61" column="43" lean-forward="false" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="external-scripts.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/external-scripts.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -58,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/hubot-scripts.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -88,6 +104,7 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/hubot-scripts.json" />
         <option value="$PROJECT_DIR$/scripts/scripts.js" />
+        <option value="$PROJECT_DIR$/external-scripts.json" />
       </list>
     </option>
   </component>
@@ -316,12 +333,12 @@
       <option name="presentableId" value="Default" />
       <updated>1506986250765</updated>
       <workItem from="1506986259883" duration="10664000" />
-      <workItem from="1507413898390" duration="10044000" />
+      <workItem from="1507413898390" duration="10725000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20708000" />
+    <option name="totallyTimeSpent" value="21389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-296" y="-1057" width="1920" height="1057" extended-state="6" />
@@ -383,7 +400,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="18" />
-          <folding />
+          <folding>
+            <marker date="1507494223073" expanded="true" signature="182:635" ph="{&quot;hubot&quot;: &quot;^2.19.0&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -406,7 +425,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="18" />
-          <folding />
+          <folding>
+            <marker date="1507494223073" expanded="true" signature="182:635" ph="{&quot;hubot&quot;: &quot;^2.19.0&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -429,15 +450,23 @@
     <entry file="file://$PROJECT_DIR$/hubot-scripts.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="62" column="3" lean-forward="false" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
+        <state relative-caret-position="501">
+          <caret line="61" column="43" lean-forward="false" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/external-scripts.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
           <folding />
         </state>
       </provider>

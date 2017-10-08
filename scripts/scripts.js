@@ -33,7 +33,7 @@ module.exports = function(johnny5) {
 //    return res.send("Hi Johnny5 is there!");
 //  });
 
-  console.log("@johnny5 is alive!!!");
+  console.log("********************************** @johnny5 is alive!!! **********************************");
 
   /*
    * To Test enter
@@ -56,6 +56,10 @@ module.exports = function(johnny5) {
 
   johnny5.respond(/open the pod bay doors/i, function(res) {
     res.reply("I'm afraid I can't let you do that.");
+  });
+
+  johnny5.respond(/I am feeling (.*)/i, function(res) {
+    res.reply("I hear you loud and clear... you are feeling " + res.match[1]);
   });
 
   function formatNewMemberOutput(members) {
