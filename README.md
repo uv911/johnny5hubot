@@ -16,11 +16,11 @@ You can test @johnny5 by running the following commands.
 ### Automatic Responses
 1.  When any user enters the room 
   
-  A)  If you are JimmyT then you get a unique welcome message
+    A)  If you are JimmyT then you get a unique welcome message
   
-  B)  Else If you are Sonyl you get a different welcome message
+    B)  Else If you are Sonyl you get a different welcome message
   
-  C)  Else you get 1 of 3 randomized welcome messages
+    C)  Else you get 1 of 3 randomized welcome messages
 
 ### Responses to general messages typed
 
