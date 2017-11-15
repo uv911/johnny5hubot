@@ -72,12 +72,12 @@ module.exports = function(johnny5) {
    * To test a new user must enter the room
    */
   johnny5.enter(function(res) {
-    var enterMsgs = ["Howdy partner", "Well hello there", "I see you"];
+    var enterMsgs = ["Howdy partner!", "Well hello there!", "I see you!"];
     var user = res.message.user.name;
     console.log("A user entered the room: " + user);
     var msg = enterMsgs[chooseRandomPosition(enterMsgs)];
     if (user.trim().toLowerCase().substr(0,6) === "jimmyt" || user.trim().toLowerCase().substr(1,6) === "jimmyt") {
-      msg = "Hey you are JimmyT";
+      msg = "Hey you are JimmyT you belong here!";
     } else if (user.trim().toLowerCase().substr(0,5) === "sonyl" || user.trim().toLowerCase().substr(1,5) === "sonyl") {
       msg = "Hi Sonyl can I sing you a song?";
     }
@@ -169,7 +169,11 @@ module.exports = function(johnny5) {
 
 
   function formatNewMemberOutput(members) {
-    return "Welcome " + formatNames(buildNamesArrayFromString(members)) + ".  Have a glorious day!!!";
+    if (members.length() > 1) {
+      return "Welcome " + formatNames(buildNamesArrayFromString(members)) + ".  Have a glorious day!!!";
+    } else {
+      return "Welcome " + members[0] + ".  Have a glorious day!!!";
+    }
   }
 
   function buildNamesArrayFromString(str) {
