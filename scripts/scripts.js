@@ -169,11 +169,8 @@ module.exports = function(johnny5) {
 
 
   function formatNewMemberOutput(members) {
-    if (members.length() > 1) {
-      return "Welcome " + formatNames(buildNamesArrayFromString(members)) + ".  Have a glorious day!!!";
-    } else {
-      return "Welcome " + members[0] + ".  Have a glorious day!!!";
-    }
+    console.log("Members: " + members);
+    return "Welcome " + formatNames(buildNamesArrayFromString(members)) + ".  Have a glorious day!!!";
   }
 
   function buildNamesArrayFromString(str) {
@@ -182,11 +179,11 @@ module.exports = function(johnny5) {
     return names;
   }
 
-
-
   function formatNames(namesArray) {
     var val = "<" + namesArray.join(">, <") + ">";
-    return val.substring(0, val.lastIndexOf(",")) + " and " + val.substring(val.lastIndexOf(",") + 2, val.length);
+    var names = val.substring(0, val.lastIndexOf(",")) + " and " + val.substring(val.lastIndexOf(",") + 2, val.length);
+    console.log("Names: " + names);
+    return names;
   }
 
   function chooseRandomPosition(array) {
