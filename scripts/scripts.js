@@ -181,9 +181,11 @@ module.exports = function(johnny5) {
 
   function formatNames(namesArray) {
     var val = "<" + namesArray.join(">, <") + ">";
-    var names = val.substring(0, val.lastIndexOf(",")) + " and " + val.substring(val.lastIndexOf(",") + 2, val.length);
-    console.log("Names: " + names);
-    return names;
+    if (namesArray.length > 1) {
+      val = val.substring(0, val.lastIndexOf(",")) + " and " + val.substring(val.lastIndexOf(",") + 2, val.length);
+    }
+    console.log("Names: " + val);
+    return val;
   }
 
   function chooseRandomPosition(array) {
