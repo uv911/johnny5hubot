@@ -89,7 +89,8 @@ module.exports = function(johnny5) {
   });
 
   johnny5.respond(/open the pod bay doors/i, function(res) {
-    var returnMsg = "I hear you want '" + res.match[0] + "'...  I'm afraid I can't let you do that for you.";
+    var names = formatNames(buildNamesArrayFromString(res.match[0]));
+    var returnMsg = "I hear you want '" + names + "' to open the pod bay doors...  I'm afraid I can't let that happen.";
     //console.log(returnMsg);
     res.reply(returnMsg);
   });
