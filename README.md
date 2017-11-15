@@ -26,21 +26,21 @@ You can test @johnny5 by running the following commands.
 
 1.  If you type any message that has the word "badgers" in it
 
-  A)  You get a "snarky" message back
+    A)  You get a "snarky" message back
 
 2.  If you type any message that starts "please welcome << with 1 or more slack users >>" in it
 
-  A)  You get a welcome message back that lists each of the users
+    A)  You get a welcome message back that lists each of the users
   
 3.  If you type "Listen I am feeling << some emotion >>"
   
-  A)  If the emotion is fat, frustrated, happy, confused, angry, cool, brave, scared, disgusted, surprised or defieant
+    A)  If the emotion is fat, frustrated, happy, confused, angry, cool, brave, scared, disgusted, surprised or defieant
       
       1. You will get a response message 
        
       2. Also a picture of a pug that is directly related to the emotion expressed 
 
-  B)  If the emotion is fat, frustrated, happy, confused, angry, cool, brave, scared, disgusted, surprised or defiant
+    B)  If the emotion is fat, frustrated, happy, confused, angry, cool, brave, scared, disgusted, surprised or defiant
       
       1. You will get a response message 
        
@@ -50,10 +50,10 @@ You can test @johnny5 by running the following commands.
 
 1.  If you type a message that says "@johnny5 open the pod bay doors"
     
-  A)  You will get a "snarky" message back
+    A)  You will get a "snarky" message back
       
 2.  If you type a message that says "@johnny5 I am feeling << some emotion >>"
        
-  A)  You will get a slightly different message than 3A and 3B commands listed above 
+    A)  You will get a slightly different message than 3A and 3B commands listed above 
   
-  B)  You will receive a pug picture based on the rules of 3A and 3B commands listed above   
+    B)  You will receive a pug picture based on the rules of 3A and 3B commands listed above   
